@@ -1,0 +1,23 @@
+
+<div class="text-center">
+<h1>Créer un nouveau wish</h1>
+</div>
+<%= simple_form_for @wish do |f| %>
+<div class="container shadow bg-white rounded my-5 p-4">
+<div class="row">
+<div class="col-8">
+<%= f.input :title, label:"C'est quoi?" %>
+</div>
+<div class="col-4">
+<%= f.input :price, label:"Prix"%>
+</div>
+<div class="col-4">
+<%= f.input :lien, label:"Lien" %>
+</div>
+</div>
+<%= f.input :content, label: "Et plus en détails?" %>
+<div class="text-right">
+<%= f.button :submit, 'Enregistrer', class: "btn btn-primary" %>
+</div>
+</div>
+<% end %>

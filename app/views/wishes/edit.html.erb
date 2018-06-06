@@ -1,0 +1,30 @@
+
+<%= f.input :title %>
+<%= f.input :price%>
+<%= f.input :lien%>
+<%= f.input :content %>
+<%= f.button :submit %>
+<% end %>
+
+<div class="text-center">
+<h1>Edit Wish <%= @wish.title %></h1>
+</div>
+<%= simple_form_for @wish do |f| %>
+<div class="container shadow bg-white rounded my-5 p-4">
+<div class="row">
+<div class="col-8">
+<%= f.input :title %>
+</div>
+<div class="col-4">
+<%= f.input :price %>
+</div>
+<div class="col-4">
+<%= f.input :lien %>
+</div>
+</div>
+<%= f.input :content %>
+<div class="text-right">
+<%= f.button :submit, class: "btn btn-primary" %>
+</div>
+</div>
+<% end %>

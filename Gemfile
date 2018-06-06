@@ -3,6 +3,7 @@ ruby '2.5.0'
 
 
 gem 'devise'
+gem "paperclip", "~> 6.0.0"
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'

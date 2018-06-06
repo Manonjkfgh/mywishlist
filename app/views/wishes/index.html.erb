@@ -1,0 +1,26 @@
+
+<div class="text-center mb-3 p-2">
+	<h1>Mes wishes</h1> 
+	<%= link_to "Nouveau wish", new_wish_path, class: "btn btn-outline-primary btn-lg btn-block margin " %>
+</div>
+
+<div class="container">
+	<% @wishes.each do |wish| %>
+
+<div class="shadow bg-white rounded p-4 d-flex justify-content-between">
+
+	<div>
+	<h2><%= wish.title %></h2>
+	</div>
+
+	<div> 
+	<p><%= wish.created_at.strftime("%D") %></p>
+	<br>
+ 	<%= link_to "En détails", wish_path(wish.id), class: "btn btn-primary" %>
+ 	</div>
+
+</div>
+
+<hr> 
+<% end %>
+</div>

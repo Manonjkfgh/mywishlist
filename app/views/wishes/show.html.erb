@@ -1,0 +1,8 @@
+<div class="container shadow bg-white rounded p-4 text-center my-5 mb-4 show">
+<h1><%= @wish.title %></h1>
+<p><%= @wish.price %> € </p>
+<h2><%= @wish.created_at.strftime("%d %b %Y") %></h2>
+<p><%= @wish.content %></p>
+<%= link_to "Supprimer", wish_path(@wish.id), method: :delete, class: "btn
+btn-danger" %>
+</div>
